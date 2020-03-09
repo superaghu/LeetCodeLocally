@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,9 +11,57 @@ import java.util.stream.Collectors;
  * Unit test for simple App.
  */
 public class AppTest {
+
+    @Test
+    public void testNameFix() {
+        final String exerciseName = "2. Add Two Numbers\n";
+        String className = "LeetCode" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
+        System.out.println(className);
+    }
+
+    @Test
+    public void random1() {
+        List<Integer> list = List.of(1, 2, 3);
+        final Integer reduceSum = list.stream().reduce(0, Integer::sum, Integer::sum);
+        final Integer reduceProduct = list.stream().reduce(1, (a, b) -> a * b, (a, b) -> a * b);
+        assertThat(reduceProduct - reduceSum).isEqualTo(0);
+    }
+
     @Test
     public void shouldAssertLowerCase() {
         assertThat("a&bcd").isEqualTo(toLower("A&bcD"));
+    }
+
+    @Test
+    public void testCountNumberOfDigits() {
+        //given
+        //when
+        //then
+        assertThat(findNumbersByStringify(Utility.listToIntArray(List.of(555, 901, 482, 1771)))).isEqualTo(1);
+        assertThat(findNumbers(Utility.listToIntArray(List.of(555, 901, 482, 1771)))).isEqualTo(1);
+
+        assertThat(findNumbersByStringify(Utility.listToIntArray(List.of(12, 345, 2, 6, 7896)))).isEqualTo(2);
+        assertThat(findNumbers(Utility.listToIntArray(List.of(12, 345, 2, 6, 7896)))).isEqualTo(2);
+    }
+
+    private int findNumbers(int[] nums) {
+        final List<Integer> integers = Utility.intArrayToList(nums);
+
+        return integers.stream().map(this::countDigits).mapToInt(x -> x % 2 == 0 ? 1 : 0).sum();
+    }
+
+    private int countDigits(int i) {
+        int numberOfDigits = 1;
+        while (i > 9) {
+            i = i / 10;
+            numberOfDigits++;
+        }
+        return numberOfDigits;
+    }
+
+    private int findNumbersByStringify(int[] nums) {
+        final List<Integer> integers = Utility.intArrayToList(nums);
+        return integers.stream().map(x -> x.toString()).mapToInt(x -> x.length() % 2 == 0 ? 1 : 0).sum();
     }
 
     private String toLower(String str) {
@@ -24,21 +71,17 @@ public class AppTest {
     @Test
     //https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
     public void shouldAssertCountOfLowerValuesThanIndex() {
-        final List<Integer> outValue = Arrays.stream(smallerNumbersThanCurrent(listToIntArray(List.of(8, 1, 2, 2, 3)))).boxed().collect(Collectors.toList());
+        final List<Integer> outValue = Utility.intArrayToList(smallerNumbersThanCurrent(Utility.listToIntArray(List.of(8, 1, 2, 2, 3))));
         assertThat(outValue).hasSameElementsAs(List.of(4, 0, 1, 1, 3));
     }
 
     private int[] smallerNumbersThanCurrent(int[] nums) {
-        List<Integer> numbers = Arrays.stream(nums).boxed().collect(Collectors.toList());
+        List<Integer> numbers = Utility.intArrayToList(nums);
         final List<Integer> collect = numbers.stream().map(x -> getHowManyAreSmaller(x, numbers)).collect(Collectors.toList());
-        return listToIntArray(collect);
+        return Utility.listToIntArray(collect);
     }
 
-    private int[] listToIntArray(List<Integer> input) {
-        return input.stream().mapToInt(x -> x).toArray();
-    }
-
-    private int getHowManyAreSmaller(int x, List<Integer> numbers){
-        return (int)numbers.stream().filter(n -> n < x).count();
+    private int getHowManyAreSmaller(int x, List<Integer> numbers) {
+        return (int) numbers.stream().filter(n -> n < x).count();
     }
 }
