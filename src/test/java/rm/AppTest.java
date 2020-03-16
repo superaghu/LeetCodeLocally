@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,7 +15,7 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "2. Add Two Numbers\n";
+        final String exerciseName = "961. N-Repeated Element in Size 2N Array\n";
         String className = "LeetCode" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
@@ -84,4 +85,15 @@ public class AppTest {
     private int getHowManyAreSmaller(int x, List<Integer> numbers) {
         return (int) numbers.stream().filter(n -> n < x).count();
     }
+
+    public int[][] flipAndInvertImage(int[][] A) {
+        int n = A.length;
+        for (int[] row : A)
+            for (int i = 0; i * 2 < n; i++)
+                if (row[i] == row[n - i - 1])
+                    row[i] = row[n - i - 1] ^= 1 ;
+        return A;
+    }
+
+
 }
