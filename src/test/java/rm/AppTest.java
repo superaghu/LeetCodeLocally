@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +14,7 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "961. N-Repeated Element in Size 2N Array\n";
+        final String exerciseName = "806. Number of Lines To Write String\n";
         String className = "LeetCode" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
@@ -88,12 +87,13 @@ public class AppTest {
 
     public int[][] flipAndInvertImage(int[][] A) {
         int n = A.length;
-        for (int[] row : A)
-            for (int i = 0; i * 2 < n; i++)
-                if (row[i] == row[n - i - 1])
-                    row[i] = row[n - i - 1] ^= 1 ;
+        for (int[] row : A) {
+            for (int i = 0; i * 2 < n; i++) {
+                if (row[i] == row[n - i - 1]) {
+                    row[i] = row[n - i - 1] ^= 1;
+                }
+            }
+        }
         return A;
     }
-
-
 }
