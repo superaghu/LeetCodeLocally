@@ -14,7 +14,7 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "806. Number of Lines To Write String\n";
+        final String exerciseName = "258. Add Digits\n\n\n";
         String className = "LeetCode" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }

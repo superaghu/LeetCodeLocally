@@ -65,7 +65,7 @@ public class LeetCode806NumberofLinesToWriteString {
         return new int[]{res, cur};
     }
 
-    public int[] numberOfLines_mySolution(int[] widths, String S) {
+    public int[] numberOfLines_mySolution_failed(int[] widths, String S) {
         final int lastCharLength = widths[S.charAt(S.length() - 1) - 97];
 
         int totalCount = S.chars().map(x -> x - 97).map(x -> widths[x]).sum();
