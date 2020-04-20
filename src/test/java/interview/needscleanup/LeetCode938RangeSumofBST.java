@@ -1,8 +1,7 @@
-package interview;
+package interview.needscleanup;
 
+import static interview.needscleanup.TreeNode.createBst;
 import static org.assertj.core.api.Assertions.assertThat;
-import static interview.TreeNode.createBst;
-
 import io.vavr.collection.List;
 import org.testng.annotations.Test;
 

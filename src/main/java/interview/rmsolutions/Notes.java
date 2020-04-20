@@ -1,4 +1,4 @@
-package interview;
+package interview.rmsolutions;
 
 public abstract class Notes {
 

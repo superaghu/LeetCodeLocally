@@ -1,7 +1,7 @@
-package interview;
+package interview.needscleanup;
 
+import static interview.needscleanup.TreeNode.createBst;
 import static org.assertj.core.api.Assertions.assertThat;
-import static interview.TreeNode.createBst;
 
 import io.vavr.collection.List;
 import org.testng.annotations.Test;
@@ -18,7 +18,9 @@ public class LeetCode104MaximumDepthofBinaryTree {
     }
 
     public int maxDepth(TreeNode root) {
-        if(root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         return 1 + Math.max(maxDepth(root.getLeft()), maxDepth(root.getRight()));
     }
 }

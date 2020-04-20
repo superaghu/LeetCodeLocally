@@ -1,4 +1,4 @@
-package interview;
+package interview.needscleanup;
 
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/
 public class LeetCode852PeakIndexinaMountainArray {

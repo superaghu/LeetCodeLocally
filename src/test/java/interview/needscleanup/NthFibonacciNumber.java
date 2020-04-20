@@ -1,4 +1,4 @@
-package interview;
+package interview.needscleanup;
 
 public class NthFibonacciNumber {
 

@@ -1,4 +1,4 @@
-package interview;
+package interview.needscleanup;
 
 public class LeetCode1TwoSum {
     public int[] twoSum(int[] nums, int target) {

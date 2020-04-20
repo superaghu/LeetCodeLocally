@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.rmsolutions.LeetCode2AddTwoNumbers;
+import interview.exercises.LeetCode2AddTwoNumbers;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
