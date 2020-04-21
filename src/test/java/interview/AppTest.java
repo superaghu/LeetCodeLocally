@@ -14,7 +14,7 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "118. Pascal's Triangle\n\n";
+        final String exerciseName = "807. Max Increase to Keep City Skyline\n";
         String className = "LeetCode" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
