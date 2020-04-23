@@ -23,7 +23,17 @@ public class LeetCode118PascalsTriangle {
             }
             triangle.add(row);
         }
+        print(triangle);
         return triangle;
+    }
+
+    private void print(List<List<Integer>> triangle) {
+        for(List<Integer> list : triangle){
+            for(Integer item : list){
+                System.out.print(item + " ");
+            }
+            System.out.println();
+        }
     }
 
     public List<List<Integer>> generate_badSolutionFromAnswers(int numRows) {
