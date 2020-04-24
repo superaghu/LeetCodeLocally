@@ -39,7 +39,7 @@ public class NumberToWordForm {
         map.put(1000000, "Million");
         map.put(1000000000, "Billion");
 //        format(1892)
-        // 1 ->One Thousand
+        //          1 -> One Thousand
 ////                8 -> Eight Hunderd
 ////                9 -> Nighthy  -> Nine Ten
 ////                2 -> Two      -> Two
@@ -47,18 +47,26 @@ public class NumberToWordForm {
         int length = String.valueOf(number).length();
         StringBuilder sb = new StringBuilder();
         for (int i = length - 1; i >= 0; i--) {
-            final int base = (int) Math.pow(10, i);
-            int digit = number / base;
+            length = String.valueOf(number).length();
+            final int base = (int) Math.pow(10, length-1);
+            int quotient = number / base;
 
             if (base == 10) {
                 sb.append(map.get(number * 10 / base));
             } else {
-                sb.append(map.get(digit));
+                sb.append(map.get(quotient));
             }
+
             if (base > 10) {
                 sb.append(map.get(base));
             }
+            if ((number >= 10 && number <= 20) || number == 30) {
+                i--;
+            }
+
             number = number % base;
+
+
         }
         return sb.toString();
     }
