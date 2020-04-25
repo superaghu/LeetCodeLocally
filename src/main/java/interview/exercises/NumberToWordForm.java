@@ -44,6 +44,9 @@ public class NumberToWordForm {
 ////                9 -> Nighthy  -> Nine Ten
 ////                2 -> Two      -> Two
 
+        //101 -> One Hundred
+        //
+
         int length = String.valueOf(number).length();
         StringBuilder sb = new StringBuilder();
         for (int i = length - 1; i >= 0; i--) {
@@ -60,7 +63,7 @@ public class NumberToWordForm {
             if (base > 10) {
                 sb.append(map.get(base));
             }
-            if ((number >= 10 && number <= 20) || number == 30) {
+            if ((number >= 10 && number <= 20) || number == 30|| number == 90) {
                 i--;
             }
 
