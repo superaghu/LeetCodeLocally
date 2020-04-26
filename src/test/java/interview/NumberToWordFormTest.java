@@ -44,14 +44,15 @@ public class NumberToWordFormTest {
         assertThat(program.wordForm(70)).isEqualTo("Seventy");
         assertThat(program.wordForm(80)).isEqualTo("Eighty");
         assertThat(program.wordForm(90)).isEqualTo("Ninety");
-        assertThat(program.wordForm(100)).isEqualTo("OneHundred");
-        assertThat(program.wordForm(1000)).isEqualTo("OneThousand");
-        assertThat(program.wordForm(1000000)).isEqualTo("OneMillion");
-        assertThat(program.wordForm(1000000000)).isEqualTo("OneBillion");
+        assertThat(program.wordForm(100)).isEqualTo("One Hundred");
+        assertThat(program.wordForm(1000)).isEqualTo("One Thousand");
+        assertThat(program.wordForm(10000)).isEqualTo("Ten Thousand");
+        assertThat(program.wordForm(1000000)).isEqualTo("One Million");
+        assertThat(program.wordForm(1000000000)).isEqualTo("One Billion");
 
-        assertThat(program.wordForm(101)).isEqualTo("OneHundredOne");
-        assertThat(program.wordForm(1999)).isEqualTo("OneThousandNineHundredNinetyNine");
-        assertThat(program.wordForm(1001)).isEqualTo("OneThousandOne");
-        assertThat(program.wordForm(1001001)).isEqualTo("OneMillionOneThousandOne");
+        assertThat(program.wordForm(101)).isEqualTo("One Hundred One");
+        assertThat(program.wordForm(1999)).isEqualTo("One Thousand Nine Hundred Ninety Nine");
+        assertThat(program.wordForm(1001)).isEqualTo("One Thousand One");
+        assertThat(program.wordForm(1001001)).isEqualTo("One Million One Thousand One");
     }
 }
