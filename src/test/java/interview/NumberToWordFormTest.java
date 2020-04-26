@@ -27,15 +27,15 @@ public class NumberToWordFormTest {
         assertThat(program.wordForm(8)).isEqualTo("Eight");
         assertThat(program.wordForm(9)).isEqualTo("Nine");
         assertThat(program.wordForm(10)).isEqualTo("Ten");
-//        assertThat(program.wordForm(11)).isEqualTo("Eleven");
-//        assertThat(program.wordForm(12)).isEqualTo("Twelve");
-//        assertThat(program.wordForm(13)).isEqualTo("Thirteen");
-//        assertThat(program.wordForm(14)).isEqualTo("Fourteen");
-//        assertThat(program.wordForm(15)).isEqualTo("Fifteen");
-//        assertThat(program.wordForm(16)).isEqualTo("Sixteen");
-//        assertThat(program.wordForm(17)).isEqualTo("Seventeen");
-//        assertThat(program.wordForm(18)).isEqualTo("Eighteen");
-//        assertThat(program.wordForm(19)).isEqualTo("Nineteen");
+        assertThat(program.wordForm(11)).isEqualTo("Eleven");
+        assertThat(program.wordForm(12)).isEqualTo("Twelve");
+        assertThat(program.wordForm(13)).isEqualTo("Thirteen");
+        assertThat(program.wordForm(14)).isEqualTo("Fourteen");
+        assertThat(program.wordForm(15)).isEqualTo("Fifteen");
+        assertThat(program.wordForm(16)).isEqualTo("Sixteen");
+        assertThat(program.wordForm(17)).isEqualTo("Seventeen");
+        assertThat(program.wordForm(18)).isEqualTo("Eighteen");
+        assertThat(program.wordForm(19)).isEqualTo("Nineteen");
         assertThat(program.wordForm(20)).isEqualTo("Twenty");
         assertThat(program.wordForm(30)).isEqualTo("Thirty");
         assertThat(program.wordForm(40)).isEqualTo("Forty");
@@ -54,5 +54,6 @@ public class NumberToWordFormTest {
         assertThat(program.wordForm(1999)).isEqualTo("One Thousand Nine Hundred Ninety Nine");
         assertThat(program.wordForm(1001)).isEqualTo("One Thousand One");
         assertThat(program.wordForm(1001001)).isEqualTo("One Million One Thousand One");
+        assertThat(program.wordForm(1234567891)).isEqualTo("One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One");
     }
 }
