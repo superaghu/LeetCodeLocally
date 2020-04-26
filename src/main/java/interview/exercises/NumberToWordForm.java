@@ -4,73 +4,116 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NumberToWordForm {
-    public String format(int number) {
-        Map<Integer, String> map = new HashMap<>();
-        map.put(0, "Zero");
-        map.put(1, "One");
-        map.put(2, "Two");
-        map.put(3, "Three");
-        map.put(4, "Four");
-        map.put(5, "Five");
-        map.put(6, "Six");
-        map.put(7, "Seven");
-        map.put(8, "Eight");
-        map.put(9, "Nine");
-        map.put(10, "Ten");
-        map.put(11, "Eleven");
-        map.put(12, "Twelve");
-        map.put(13, "Thirteen");
-        map.put(14, "Fourteen");
-        map.put(15, "Fifteen");
-        map.put(16, "Sixteen");
-        map.put(17, "Seventeen");
-        map.put(18, "Eighteen");
-        map.put(19, "Nineteen");
-        map.put(20, "Twenty");
-        map.put(30, "Thirty");
-        map.put(40, "Forty");
-        map.put(50, "Fifty");
-        map.put(60, "Sixty");
-        map.put(70, "Seventy");
-        map.put(80, "Eighty");
-        map.put(90, "Ninety");
-        map.put(100, "Hundred");
-        map.put(1000, "Thousand");
-        map.put(1000000, "Million");
-        map.put(1000000000, "Billion");
-//        format(1892)
-        //          1 -> One Thousand
-////                8 -> Eight Hunderd
-////                9 -> Nighthy  -> Nine Ten
-////                2 -> Two      -> Two
+    private static Map<Integer, String> MAP = new HashMap<>();
 
-        //101 -> One Hundred
-        //
+    static {
+        MAP.put(0, "Zero");
+        MAP.put(1, "One");
+        MAP.put(2, "Two");
+        MAP.put(3, "Three");
+        MAP.put(4, "Four");
+        MAP.put(5, "Five");
+        MAP.put(6, "Six");
+        MAP.put(7, "Seven");
+        MAP.put(8, "Eight");
+        MAP.put(9, "Nine");
+        MAP.put(10, "Ten");
+        MAP.put(11, "Eleven");
+        MAP.put(12, "Twelve");
+        MAP.put(13, "Thirteen");
+        MAP.put(14, "Fourteen");
+        MAP.put(15, "Fifteen");
+        MAP.put(16, "Sixteen");
+        MAP.put(17, "Seventeen");
+        MAP.put(18, "Eighteen");
+        MAP.put(19, "Nineteen");
+        MAP.put(20, "Twenty");
+        MAP.put(30, "Thirty");
+        MAP.put(40, "Forty");
+        MAP.put(50, "Fifty");
+        MAP.put(60, "Sixty");
+        MAP.put(70, "Seventy");
+        MAP.put(80, "Eighty");
+        MAP.put(90, "Ninety");
+        MAP.put(100, "Hundred");
+        MAP.put(1000, "Thousand");
+        MAP.put(1000000, "Million");
+        MAP.put(1000000000, "Billion");
+    }
 
+    public String wordForm_ArrayStyle(int number) {
+        if (number == 0) {
+            return "Zero";
+        }
+        int length = String.valueOf(number).length();
+        int[] digitArray = new int[length]; // 9,0,8,1
+
+        for (int i = length - 1, j = 0; i >= 0; i--, j++) {
+            final int base = (int) Math.pow(10, i);
+            int quotient = number / base;
+            digitArray[j] = quotient;
+            number = number % base;
+        }
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0, j = length - 1; i < length; i++, j--) {
+            final int base = (int) Math.pow(10, j);
+            int digit = digitArray[i];
+            if (digit != 0) {
+                sb.append(MAP.get(digitArray[i]) + " " + MAP.get(base));
+            }
+        }
+
+        return sb.toString();
+    }
+    //              format(1892)
+    //              1 -> One Thousand
+////                8 -> Eight Hundred
+////                9 -> Ninety
+////                2 -> Two
+
+    public String wordForm(int number) {
+        if (number == 0) {
+            return "Zero";
+        }
         int length = String.valueOf(number).length();
         StringBuilder sb = new StringBuilder();
         for (int i = length - 1; i >= 0; i--) {
-            length = String.valueOf(number).length();
-            final int base = (int) Math.pow(10, length-1);
+            int currLength = String.valueOf(number).length();
+            final int base = (int) Math.pow(10, i);
             int quotient = number / base;
 
-            if (base == 10) {
-                sb.append(map.get(number * 10 / base));
-            } else {
-                sb.append(map.get(quotient));
+            if (currLength == 2) {
+//                if (number > 10 && number < 20) {
+//                    sb.append(MAP.get(number));
+//                } else {
+                    quotient *= 10;
+//                }
             }
 
-            if (base > 10) {
-                sb.append(map.get(base));
+            if (quotient != 0) {
+                sb.append(MAP.get(quotient));
             }
-            if ((number >= 10 && number <= 20) || number == 30|| number == 90) {
-                i--;
+
+            if (currLength > 2) {
+                sb.append(MAP.get(base));
             }
 
             number = number % base;
-
-
         }
         return sb.toString();
     }
+
+//    if (base == 10) {
+//        sb.append(MAP.get(number * 10 / base));
+//    } else {
+//        sb.append(MAP.get(quotient));
+//    }
+//
+//            if (base > 10) {
+//        sb.append(MAP.get(base));
+//    }
+//            if ((number >= 10 && number <= 20) || number == 30 || number == 90) {
+//        i--;
+//    }
 }

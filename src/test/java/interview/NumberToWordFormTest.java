@@ -16,40 +16,42 @@ public class NumberToWordFormTest {
 
     @Test
     public void testName() {
-//        assertThat(program.format(1)).isEqualTo("One");
-//        assertThat(program.format(2)).isEqualTo("Two");
-//        assertThat(program.format(3)).isEqualTo("Three");
-//        assertThat(program.format(4)).isEqualTo("Four");
-//        assertThat(program.format(5)).isEqualTo("Five");
-//        assertThat(program.format(6)).isEqualTo("Six");
-//        assertThat(program.format(7)).isEqualTo("Seven");
-//        assertThat(program.format(8)).isEqualTo("Eight");
-//        assertThat(program.format(9)).isEqualTo("Nine");
-////        assertThat(program.format(10)).isEqualTo("Ten");
-////        assertThat(program.format(11)).isEqualTo("Eleven");
-////        assertThat(program.format(12)).isEqualTo("Twelve");
-////        assertThat(program.format(13)).isEqualTo("Thirteen");
-////        assertThat(program.format(14)).isEqualTo("Fourteen");
-////        assertThat(program.format(15)).isEqualTo("Fifteen");
-////        assertThat(program.format(16)).isEqualTo("Sixteen");
-////        assertThat(program.format(17)).isEqualTo("Seventeen");
-////        assertThat(program.format(18)).isEqualTo("Eighteen");
-////        assertThat(program.format(19)).isEqualTo("Nineteen");
-////        assertThat(program.format(20)).isEqualTo("Twenty");
-////        assertThat(program.format(30)).isEqualTo("Thirty");
-////        assertThat(program.format(40)).isEqualTo("Forty");
-////        assertThat(program.format(50)).isEqualTo("Fifty");
-////        assertThat(program.format(60)).isEqualTo("Sixty");
-////        assertThat(program.format(70)).isEqualTo("Seventy");
-////        assertThat(program.format(80)).isEqualTo("Eighty");
-////        assertThat(program.format(90)).isEqualTo("Ninety");
-//        assertThat(program.format(101)).isEqualTo("One Hundred One");
-//        assertThat(program.format(100)).isEqualTo("Hundred");
-//        assertThat(program.format(1000)).isEqualTo("Thousand");
-//        assertThat(program.format(1000000)).isEqualTo("Million");
-//        assertThat(program.format(1000000000)).isEqualTo("Billion");
+        assertThat(program.wordForm(0)).isEqualTo("Zero");
+        assertThat(program.wordForm(1)).isEqualTo("One");
+        assertThat(program.wordForm(2)).isEqualTo("Two");
+        assertThat(program.wordForm(3)).isEqualTo("Three");
+        assertThat(program.wordForm(4)).isEqualTo("Four");
+        assertThat(program.wordForm(5)).isEqualTo("Five");
+        assertThat(program.wordForm(6)).isEqualTo("Six");
+        assertThat(program.wordForm(7)).isEqualTo("Seven");
+        assertThat(program.wordForm(8)).isEqualTo("Eight");
+        assertThat(program.wordForm(9)).isEqualTo("Nine");
+        assertThat(program.wordForm(10)).isEqualTo("Ten");
+//        assertThat(program.wordForm(11)).isEqualTo("Eleven");
+//        assertThat(program.wordForm(12)).isEqualTo("Twelve");
+//        assertThat(program.wordForm(13)).isEqualTo("Thirteen");
+//        assertThat(program.wordForm(14)).isEqualTo("Fourteen");
+//        assertThat(program.wordForm(15)).isEqualTo("Fifteen");
+//        assertThat(program.wordForm(16)).isEqualTo("Sixteen");
+//        assertThat(program.wordForm(17)).isEqualTo("Seventeen");
+//        assertThat(program.wordForm(18)).isEqualTo("Eighteen");
+//        assertThat(program.wordForm(19)).isEqualTo("Nineteen");
+        assertThat(program.wordForm(20)).isEqualTo("Twenty");
+        assertThat(program.wordForm(30)).isEqualTo("Thirty");
+        assertThat(program.wordForm(40)).isEqualTo("Forty");
+        assertThat(program.wordForm(50)).isEqualTo("Fifty");
+        assertThat(program.wordForm(60)).isEqualTo("Sixty");
+        assertThat(program.wordForm(70)).isEqualTo("Seventy");
+        assertThat(program.wordForm(80)).isEqualTo("Eighty");
+        assertThat(program.wordForm(90)).isEqualTo("Ninety");
+        assertThat(program.wordForm(100)).isEqualTo("OneHundred");
+        assertThat(program.wordForm(1000)).isEqualTo("OneThousand");
+        assertThat(program.wordForm(1000000)).isEqualTo("OneMillion");
+        assertThat(program.wordForm(1000000000)).isEqualTo("OneBillion");
 
-      //  assertThat(program.format(101)).isEqualTo("One Hundred One");
-        assertThat(program.format(1999)).isEqualTo("One Thousand Nine Hundred Ninety Nine");
+        assertThat(program.wordForm(101)).isEqualTo("OneHundredOne");
+        assertThat(program.wordForm(1999)).isEqualTo("OneThousandNineHundredNinetyNine");
+        assertThat(program.wordForm(1001)).isEqualTo("OneThousandOne");
+        assertThat(program.wordForm(1001001)).isEqualTo("OneMillionOneThousandOne");
     }
 }
