@@ -3,7 +3,7 @@ package interview.rmsolutions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NumberToWordForm {
+public class LC273IntegertoEnglishWords {
     private static Map<Integer, String> MAP = new HashMap<>();
 
     static {

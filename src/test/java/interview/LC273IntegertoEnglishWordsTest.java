@@ -2,16 +2,16 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.NumberToWordForm;
+import interview.exercises.LC273IntegertoEnglishWords;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class NumberToWordFormTest {
-    private NumberToWordForm program;
+public class LC273IntegertoEnglishWordsTest {
+    private LC273IntegertoEnglishWords program;
 
     @BeforeMethod
     public void setUp() {
-        program = new NumberToWordForm();
+        program = new LC273IntegertoEnglishWords();
     }
 
     @Test
