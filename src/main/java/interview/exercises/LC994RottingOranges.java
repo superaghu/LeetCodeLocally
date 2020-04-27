@@ -30,13 +30,12 @@ public class LC994RottingOranges {
         if (freshOrangeExist(grid)) {
             return -1;
         }
-        return minutes-1;
+        return minutes - 1;
     }
 
     private List<Position> checkStatus(List<Position> positions, int[][] grid) {
         List<Position> newPositions = new ArrayList<>();
         for (Position position : positions) {
-            grid[position.x][position.y] = 2;
             final Position left = new Position(position.x - 1, position.y);
             final Position right = new Position(position.x + 1, position.y);
             final Position up = new Position(position.x, position.y - 1);
@@ -59,8 +58,10 @@ public class LC994RottingOranges {
     }
 
     private boolean isFreshOrange(Position position, int[][] grid) {
-        if (position.x >= 0 && position.x < grid.length && position.y >= 0 && position.y < grid[0].length) {
-            return grid[position.x][position.y] == 1;
+        if (position.x >= 0 && position.x < grid.length && position.y >= 0 && position.y < grid[0].length && grid[position.x][position.y] == 1) {
+            grid[position.x][position.y] = 2;
+
+            return true;
         }
         return false;
     }
