@@ -40,7 +40,7 @@ public class LC2AddTwoNumbersTest {
         assertThat(node.getNext().getNext().getVal()).isEqualTo(1);
     }
 
-    public LC2AddTwoNumbers.ListNode create(List<Integer> list) {
+    private LC2AddTwoNumbers.ListNode create(List<Integer> list) {
         LC2AddTwoNumbers.ListNode listNode = null;
         for (Integer integer : list) {
             listNode = appendToLast(integer, listNode);
