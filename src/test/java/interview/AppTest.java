@@ -14,7 +14,7 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "273. Integer to English Words\n\n\n";
+        final String exerciseName = "21. Merge Two Sorted Lists\n\n";
         String className = "LC" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
