@@ -1,21 +1,8 @@
 package interview.rmsolutions;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import interview.exercises.ListNode;
 
 public class LC2AddTwoNumbers {
-
-    @RequiredArgsConstructor
-    @AllArgsConstructor
-    @Getter
-    public static class ListNode {
-        private final int val;
-        @Setter
-        ListNode next;
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode prev = new ListNode(0);
         ListNode head = prev;
@@ -65,28 +52,4 @@ public class LC2AddTwoNumbers {
 
         return head;
     }
-
-//    public ListNode create(List<Integer> list) {
-//        ListNode listNode = null;
-//        for (Integer integer : list) {
-//            listNode = appendToLast(integer, listNode);
-//        }
-//        return listNode;
-//    }
-//
-//    private ListNode appendToLast(Integer integer, ListNode listNode) {
-//        if (listNode == null) {
-//            listNode = new ListNode(integer);
-//            return listNode;
-//        }
-//
-//        ListNode head = listNode;
-//
-//        while (listNode.next != null) {
-//            listNode = listNode.next;
-//        }
-//
-//        listNode.next = new ListNode(integer);
-//        return head;
-//    }
 }
