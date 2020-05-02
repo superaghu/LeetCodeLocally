@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -14,9 +16,18 @@ public class AppTest {
 
     @Test
     public void testNameFix() {
-        final String exerciseName = "21. Merge Two Sorted Lists\n\n";
+        final String exerciseName = "138. Copy List with Random Pointer\n\n\n";
         String className = "LC" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
+    }
+
+    @Test
+    public void testRegex() {
+        final Pattern RQ_TYPE_PATTERN = Pattern.compile("(outboundCalls)\\.([\\w]+\\.[\\w]+\\.[\\w]+)\\.(.+)");
+        final String input = "outboundCalls.name.aTransactionType.aSvcName.aResponderId.value outboundCalls.name.aTransactionType.aSvcName.aResponderId.value";
+        final Matcher matcher = RQ_TYPE_PATTERN.matcher(input);
+        final String result = matcher.replaceFirst("$1.withRequestType.$2." + "aRqType" + ".$3");
+        assertThat(result).isEqualTo("outboundCalls.withRequestType.name.aTransactionType.aSvcName.aRqType.aResponderId.value");
     }
 
     @Test
