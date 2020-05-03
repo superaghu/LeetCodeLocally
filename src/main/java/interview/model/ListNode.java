@@ -1,4 +1,4 @@
-package interview.exercises;
+package interview.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

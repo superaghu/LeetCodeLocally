@@ -1,10 +1,10 @@
 package interview;
 
-import static interview.exercises.ListNode.create;
+import static interview.model.ListNode.create;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import interview.exercises.LC21MergeTwoSortedLists;
-import interview.exercises.ListNode;
+import interview.model.ListNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
