@@ -29,7 +29,8 @@ public class LC138CopyListwithRandomPointerTest {
     public void testGenerate2() {
         final List<Tuple2<Integer, Integer>> list = List.of(new Tuple2<>(7, null), new Tuple2<>(13, 0), new Tuple2<>(11, 4), new Tuple2<>(10, 2), new Tuple2<>(1, 0));
         final Node head = create(list);
-        assertThat(program.copyRandomList(head)).isEqualTo(head);
+        final Node actual = program.copyRandomList(head);
+        assertThat(actual).isEqualTo(head);
     }
 
     @Test
