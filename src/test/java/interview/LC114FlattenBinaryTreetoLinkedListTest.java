@@ -1,5 +1,6 @@
 package interview;
 
+import static interview.model.TreeNode.display;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import interview.exercises.LC114FlattenBinaryTreetoLinkedList;
@@ -22,7 +23,9 @@ public class LC114FlattenBinaryTreetoLinkedListTest {
         TreeNode leftTree = new TreeNode(2, new TreeNode(3), new TreeNode(4));
         TreeNode rightTree = new TreeNode(5, null, new TreeNode(6));
         TreeNode toFlatten = new TreeNode(1, leftTree, rightTree);
+        display(toFlatten);
         program.flatten(toFlatten);
+        display(toFlatten);
         assertThat(toFlatten).isEqualTo(TreeNode.createBinarySearchTree(List.of(1, 2, 3, 4, 5, 6)));
     }
 }

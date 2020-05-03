@@ -1,12 +1,14 @@
 package interview.model;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -14,37 +16,6 @@ public class TreeNode {
 
     public TreeNode(int val) {
         this.val = val;
-    }
-
-    public boolean equals(final Object o) {
-        if (o == this) {
-            return true;
-        }
-        if (!(o instanceof TreeNode)) {
-            return false;
-        }
-        final TreeNode other = (TreeNode) o;
-        if (!other.canEqual(this)) {
-            return false;
-        }
-        if (this.val != other.val) {
-            return false;
-        }
-        final TreeNode this$left = this.left;
-        final TreeNode other$left = other.left;
-        if (this$left == null ? other$left != null : this$left.val != other$left.val) {
-            return false;
-        }
-        final TreeNode this$right = this.right;
-        final TreeNode other$right = other.right;
-        if (this$right == null ? other$right != null : this$right.val != other$right.val) {
-            return false;
-        }
-        return true;
-    }
-
-    protected boolean canEqual(final Object other) {
-        return other instanceof TreeNode;
     }
 
     public static TreeNode createBinarySearchTree(List<Integer> list) {
@@ -61,7 +32,6 @@ public class TreeNode {
                 insertIntoBinarySearchTree(head, nodeValue);
             }
         }
-
         return head;
     }
 
@@ -69,7 +39,6 @@ public class TreeNode {
         if (root == null) {
             return;
         }
-
         if (nodeValue < root.val) {
             if (root.left == null) {
                 root.left = new TreeNode(nodeValue);
@@ -82,6 +51,37 @@ public class TreeNode {
             } else {
                 insertIntoBinarySearchTree(root.right, nodeValue);
             }
+        }
+    }
+
+    public static void display(TreeNode root) {
+        System.out.println("--printing tree--");
+        final int height = 5, width = 64;
+
+        int len = width * height * 2 + 2;
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 1; i <= len; i++) {
+            sb.append(i < len - 2 && i % width == 0 ? "\n" : ' ');
+        }
+
+        displayR(sb, width / 2, 1, width / 4, width, root, " ");
+        System.out.println(sb);
+    }
+
+    private static void displayR(StringBuilder sb, int c, int r, int d, int w, TreeNode n,
+                                 String edge) {
+        if (n != null) {
+            displayR(sb, c - d, r + 2, d / 2, w, n.left, " /");
+
+            String s = String.valueOf(n.val);
+            int idx1 = r * w + c - (s.length() + 1) / 2;
+            int idx2 = idx1 + s.length();
+            int idx3 = idx1 - w;
+            if (idx2 < sb.length()) {
+                sb.replace(idx1, idx2, s).replace(idx3, idx3 + 2, edge);
+            }
+
+            displayR(sb, c + d, r + 2, d / 2, w, n.right, "\\ ");
         }
     }
 }
