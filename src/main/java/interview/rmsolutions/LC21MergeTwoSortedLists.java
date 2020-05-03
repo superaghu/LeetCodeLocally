@@ -1,6 +1,6 @@
 package interview.rmsolutions;
 
-import interview.exercises.ListNode;
+import interview.model.ListNode;
 
 //https://leetcode.com/problems/merge-two-sorted-lists/
 public class LC21MergeTwoSortedLists {

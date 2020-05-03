@@ -1,4 +1,4 @@
-package interview.exercises;
+package interview.rmsolutions;
 
 import interview.model.Node;
 
