@@ -1,7 +1,6 @@
 package interview.exercises;
 
 import interview.model.TreeNode;
-import io.vavr.Tuple2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,30 +10,37 @@ import java.util.Map;
 import java.util.Queue;
 
 public class LC199BinaryTreeRightSideView {
+    class DepthAndNode {
+        int depth;
+        TreeNode node;
+
+        public DepthAndNode(int depth, TreeNode node) {
+            this.depth = depth;
+            this.node = node;
+        }
+    }
 
     public List<Integer> rightSideView(TreeNode root) {
         Map<Integer, Integer> perLevelItem = new HashMap<>();
-        Queue<Tuple2<Integer, TreeNode>> queue = new LinkedList<>();
+        Queue<DepthAndNode> queue = new LinkedList<>();
         int max_depth = 0;
 
         if (root != null) {
-            queue.add(new Tuple2<>(0, root));
+            queue.add(new DepthAndNode(0, root));
         }
 
         while (!queue.isEmpty()) {
-            Tuple2<Integer, TreeNode> depthAndNode = queue.poll();
-            max_depth = Integer.max(max_depth, depthAndNode._1);
-            if (depthAndNode._2.left != null) {
-                queue.add(new Tuple2<>(depthAndNode._1 + 1, depthAndNode._2.left));
+            DepthAndNode depthAndNode = queue.poll();
+            max_depth = Integer.max(max_depth, depthAndNode.depth);
+            if (depthAndNode.node.left != null) {
+                queue.add(new DepthAndNode(depthAndNode.depth + 1, depthAndNode.node.left));
             }
-            if (depthAndNode._2.right != null) {
-                queue.add(new Tuple2<>(depthAndNode._1 + 1, depthAndNode._2.right));
+            if (depthAndNode.node.right != null) {
+                queue.add(new DepthAndNode(depthAndNode.depth + 1, depthAndNode.node.right));
             }
-            perLevelItem.put(depthAndNode._1, depthAndNode._2.val);
+            perLevelItem.put(depthAndNode.depth, depthAndNode.node.val);
         }
 
         return new ArrayList<>(perLevelItem.values());
     }
-
-
 }
