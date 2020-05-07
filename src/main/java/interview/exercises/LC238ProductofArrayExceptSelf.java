@@ -5,7 +5,6 @@ package interview.exercises;
  */
 public class LC238ProductofArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
-
-        return null;
+       return null;
     }
 }
