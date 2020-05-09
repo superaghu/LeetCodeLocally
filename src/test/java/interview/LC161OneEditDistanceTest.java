@@ -16,7 +16,7 @@ public class LC161OneEditDistanceTest {
 
     @Test
     public void testGenerate() {
-        assertThat(program.isOneEditDistance("ab", "abc")).isEqualTo(true);
+        assertThat(program.isOneEditDistance("ab", "acb")).isEqualTo(true);
     }
 
     @Test
@@ -27,5 +27,15 @@ public class LC161OneEditDistanceTest {
     @Test
     public void testGenerate3() {
         assertThat(program.isOneEditDistance("1203", "1213")).isEqualTo(true);
+    }
+
+    @Test
+    public void testGenerate4() {
+        assertThat(program.isOneEditDistance("a", "")).isEqualTo(true);
+    }
+
+    @Test
+    public void testGenerate5() {
+        assertThat(program.isOneEditDistance("cab", "ab")).isEqualTo(true);
     }
 }
