@@ -1,10 +1,10 @@
 package interview;
 
-import static interview.model.Node.create;
+import static interview.java.model.Node.create;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import interview.exercises.LC138CopyListwithRandomPointer;
-import interview.model.Node;
+import interview.java.exercises.LC138CopyListwithRandomPointer;
+import interview.java.model.Node;
 import io.vavr.Tuple2;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

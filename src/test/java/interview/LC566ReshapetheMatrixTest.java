@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.rmsolutions.LC566ReshapetheMatrix;
+import interview.java.rmsolutions.LC566ReshapetheMatrix;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

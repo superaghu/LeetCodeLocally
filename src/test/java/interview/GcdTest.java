@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.Gcd;
+import interview.java.exercises.Gcd;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

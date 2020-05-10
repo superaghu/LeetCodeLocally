@@ -1,10 +1,10 @@
 package interview;
 
-import static interview.model.TreeNode.display;
+import static interview.java.model.TreeNode.display;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC114FlattenBinaryTreetoLinkedList;
-import interview.model.TreeNode;
+import interview.java.exercises.LC114FlattenBinaryTreetoLinkedList;
+import interview.java.model.TreeNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

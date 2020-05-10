@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC994RottingOranges;
+import interview.java.exercises.LC994RottingOranges;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import interview.exercises.LC66PlusOne;
+import interview.java.exercises.LC66PlusOne;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
