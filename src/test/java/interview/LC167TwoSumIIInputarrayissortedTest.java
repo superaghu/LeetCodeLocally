@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import interview.java.rmsolutions.LC167TwoSumIIInputarrayissorted;
+import interview.scala.rmsolutions.LC167TwoSumIIInputarrayissorted;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

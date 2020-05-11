@@ -5,21 +5,17 @@ package interview.java.rmsolutions;
  */
 public class LC167TwoSumIIInputarrayissorted {
     public int[] twoSum(int[] numbers, int target) {
-        for (int i = 0, j = 1; j < numbers.length && i < numbers.length - 1; ) {
-            if (numbers[i] + numbers[j] > target || j < numbers.length - 1) {
-                for (int k = i + 1; k < j; k++) {
-                    if (numbers[i] + numbers[j] == target) {
-                        return new int[]{i + 1, j + 1};
-                    }
-                    i++;
-                }
-            }
-            if (numbers[i] + numbers[j] == target) {
-                return new int[]{i + 1, j + 1};
-            }
+        int low = 0;
+        int high = numbers.length - 1;
 
-            if (j < numbers.length - 1) {
-                j++;
+        while (low < high) {
+            if (numbers[low] + numbers[high] == target) {
+                return new int[]{low + 1, high + 1};
+            }
+            if(numbers[low] + numbers[high] > target){
+                high--;
+            }else {
+                low++;
             }
         }
         return null;
