@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC42TrappingRainWater;
+import interview.java.exercises.LC42TrappingRainWater;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

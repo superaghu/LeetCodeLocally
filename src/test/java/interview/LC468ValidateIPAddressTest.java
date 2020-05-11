@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC468ValidateIPAddress;
+import interview.java.exercises.LC468ValidateIPAddress;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

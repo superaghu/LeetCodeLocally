@@ -1,6 +1,6 @@
 package interview;
 
-import interview.exercises.LC238ProductofArrayExceptSelf;
+import interview.java.exercises.LC238ProductofArrayExceptSelf;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

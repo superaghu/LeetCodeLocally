@@ -1,9 +1,9 @@
 package interview;
 
-import static interview.model.TreeNode.createBinarySearchTree;
+import static interview.java.model.TreeNode.createBinarySearchTree;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC104MaximumDepthofBinaryTree;
+import interview.java.exercises.LC104MaximumDepthofBinaryTree;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

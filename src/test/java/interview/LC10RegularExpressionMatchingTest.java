@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import interview.exercises.LC10RegularExpressionMatching;
+import interview.java.exercises.LC10RegularExpressionMatching;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

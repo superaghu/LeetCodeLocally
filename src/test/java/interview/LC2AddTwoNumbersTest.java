@@ -2,8 +2,8 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC2AddTwoNumbers;
-import interview.model.ListNode;
+import interview.java.exercises.LC2AddTwoNumbers;
+import interview.java.model.ListNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

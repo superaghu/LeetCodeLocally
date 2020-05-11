@@ -2,7 +2,7 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.exercises.LC3LongestSubstringWithoutRepeatingCharacters;
+import interview.java.exercises.LC3LongestSubstringWithoutRepeatingCharacters;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
