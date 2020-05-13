@@ -16,6 +16,6 @@ public class LC1TwoSumTest {
 
     @Test
     public void testName() {
-        assertThat(program.twoSum(new int[]{2, 7, 11, 15}, 9)).isEqualTo(new int[]{0, 9});
+        assertThat(program.twoSum(new int[]{2, 7, 11, 15}, 9)).isEqualTo(new int[]{0, 1});
     }
 }
