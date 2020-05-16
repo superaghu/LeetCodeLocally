@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC118PascalsTriangleTest {
     private LC118PascalsTriangle program;
 
@@ -16,7 +17,7 @@ public class LC118PascalsTriangleTest {
         program = new LC118PascalsTriangle();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
 
         final List<Integer> level1 = List.of(1);

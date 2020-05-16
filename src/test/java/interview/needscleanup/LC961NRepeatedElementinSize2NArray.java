@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC961NRepeatedElementinSize2NArray {
     public int repeatedNTimes(int[] A) {
 //        Arrays.sort(A);
@@ -24,7 +25,7 @@ public class LC961NRepeatedElementinSize2NArray {
         return 0;
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(repeatedNTimes(new int[]{1, 2, 2, 3})).isEqualTo(2);
         assertThat(repeatedNTimes(new int[]{2, 1, 2, 5, 3, 2})).isEqualTo(2);

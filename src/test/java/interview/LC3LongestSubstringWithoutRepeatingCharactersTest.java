@@ -6,6 +6,7 @@ import interview.java.exercises.LC3LongestSubstringWithoutRepeatingCharacters;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC3LongestSubstringWithoutRepeatingCharactersTest {
     private LC3LongestSubstringWithoutRepeatingCharacters program;
 
@@ -14,7 +15,7 @@ public class LC3LongestSubstringWithoutRepeatingCharactersTest {
         program = new LC3LongestSubstringWithoutRepeatingCharacters();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.lengthOfLongestSubstring("abcabcbb")).isEqualTo(3);
         assertThat(program.lengthOfLongestSubstring("bbbbb")).isEqualTo(1);

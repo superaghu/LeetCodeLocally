@@ -6,14 +6,15 @@ import org.testng.annotations.Test;
 
 import java.util.stream.Stream;
 
+@Test(enabled = false)
 public class ReverseTheString {
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(reverse("input")).isEqualTo("tupni");
         assertThat(reverse("")).isEqualTo("");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName2() {
         assertThat(reverse2("input")).isEqualTo("tupni");
         assertThat(reverse2("")).isEqualTo("");

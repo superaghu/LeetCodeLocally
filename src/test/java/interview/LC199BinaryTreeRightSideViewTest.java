@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC199BinaryTreeRightSideViewTest {
 
     private LC199BinaryTreeRightSideView program;
@@ -19,7 +20,7 @@ public class LC199BinaryTreeRightSideViewTest {
         program = new LC199BinaryTreeRightSideView();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
         TreeNode leftTree = new TreeNode(2, new TreeNode(3), new TreeNode(4));
         TreeNode rightTree = new TreeNode(5, null, new TreeNode(6));

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC21MergeTwoSortedListsTest {
     private LC21MergeTwoSortedLists program;
 
@@ -18,7 +19,7 @@ public class LC21MergeTwoSortedListsTest {
         program = new LC21MergeTwoSortedLists();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         ListNode node = program.mergeTwoLists(create(List.of(1, 2, 4)), create(List.of(1, 3, 4)));
         assertThat(node.getVal()).isEqualTo(1);

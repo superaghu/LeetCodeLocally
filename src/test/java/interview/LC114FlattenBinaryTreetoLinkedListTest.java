@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC114FlattenBinaryTreetoLinkedListTest {
     private LC114FlattenBinaryTreetoLinkedList program;
 
@@ -18,7 +19,7 @@ public class LC114FlattenBinaryTreetoLinkedListTest {
         program = new LC114FlattenBinaryTreetoLinkedList();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
         TreeNode leftTree = new TreeNode(2, new TreeNode(3), new TreeNode(4));
         TreeNode rightTree = new TreeNode(5, null, new TreeNode(6));

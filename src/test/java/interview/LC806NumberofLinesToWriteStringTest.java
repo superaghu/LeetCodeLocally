@@ -6,6 +6,7 @@ import interview.java.exercises.LC806NumberofLinesToWriteString;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC806NumberofLinesToWriteStringTest {
     private LC806NumberofLinesToWriteString program;
 
@@ -14,7 +15,7 @@ public class LC806NumberofLinesToWriteStringTest {
         program = new LC806NumberofLinesToWriteString();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         int[] widths = new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
         String S = "abcdefghijklmnopqrstuvwxyz";
@@ -23,7 +24,7 @@ public class LC806NumberofLinesToWriteStringTest {
         assertThat(result).contains(expected);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName2() {
         int[] widths = new int[]{4, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
         String S = "bbbcccdddaaa";
@@ -32,7 +33,7 @@ public class LC806NumberofLinesToWriteStringTest {
         assertThat(result).contains(expected);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName3() {
         int[] widths = new int[]{7, 5, 4, 7, 10, 7, 9, 4, 8, 9, 6, 5, 4, 2, 3, 10, 9, 9, 3, 7, 5, 2, 9, 4, 8, 9};
         String S = "zlrovckbgjqofmdzqetflraziyvkvcxzahzuuveypqxmjbwrjvmpdxjuhqyktuwjvmbeswxuznumazgxvitdrzxmqzhaaudztgie";

@@ -6,6 +6,7 @@ import interview.java.exercises.LC541ReverseStringII;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC541ReverseStringIITest {
 
     private LC541ReverseStringII program;
@@ -15,7 +16,7 @@ public class LC541ReverseStringIITest {
         program = new LC541ReverseStringII();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
         assertThat(program.reverseStr("abcdefg", 2)).isEqualTo("bacdfeg");
         assertThat(program.reverseStr("ab", 3)).isEqualTo("ba");

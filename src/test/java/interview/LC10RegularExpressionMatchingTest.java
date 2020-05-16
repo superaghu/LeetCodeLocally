@@ -6,6 +6,7 @@ import interview.java.exercises.LC10RegularExpressionMatching;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC10RegularExpressionMatchingTest {
     private LC10RegularExpressionMatching program;
 
@@ -14,7 +15,7 @@ public class LC10RegularExpressionMatchingTest {
         program = new LC10RegularExpressionMatching();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.isMatch("aa", "a")).isEqualTo(false);
         assertThat(program.isMatch("aa", "a*")).isEqualTo(true);

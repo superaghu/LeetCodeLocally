@@ -2,10 +2,11 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import interview.java.rmsolutions.LC566ReshapetheMatrix;
+import interview.java.exercises.LC566ReshapetheMatrix;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC566ReshapetheMatrixTest {
     private LC566ReshapetheMatrix program;
 
@@ -14,7 +15,7 @@ public class LC566ReshapetheMatrixTest {
         program = new LC566ReshapetheMatrix();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4)).contains(new int[][]{{1, 2, 3, 4}});
         assertThat(program.matrixReshape(new int[][]{{1, 2}, {3, 4}}, 2, 4)).contains(new int[][]{{1, 2}, {3, 4}});

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC938RangeSumofBSTTest {
     private LC938RangeSumofBST program;
 
@@ -18,7 +19,7 @@ public class LC938RangeSumofBSTTest {
         program = new LC938RangeSumofBST();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         final TreeNode treeNode = createBinarySearchTree(List.of(1, 2, 3, 5, 4));
         assertThat(program.rangeSumBST(treeNode, 1, 3)).isEqualTo(6);

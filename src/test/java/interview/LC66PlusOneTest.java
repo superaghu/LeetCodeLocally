@@ -6,6 +6,7 @@ import interview.java.exercises.LC66PlusOne;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC66PlusOneTest {
     private LC66PlusOne program;
 
@@ -14,7 +15,7 @@ public class LC66PlusOneTest {
         program = new LC66PlusOne();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
         assertThat(program.plusOne(new int[]{1, 2, 3})).isEqualTo(new int[]{1, 2, 4});
         assertThat(program.plusOne(new int[]{9, 9, 9})).isEqualTo(new int[]{1, 0, 0, 0});

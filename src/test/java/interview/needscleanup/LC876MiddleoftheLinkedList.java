@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 //https://leetcode.com/problems/middle-of-the-linked-list/
+@Test(enabled = false)
 public class LC876MiddleoftheLinkedList {
 
     @RequiredArgsConstructor
@@ -18,7 +19,7 @@ public class LC876MiddleoftheLinkedList {
         ListNode next;
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(create(List.of(1, 2, 3)).val).isEqualTo(1);
         assertThat(middleNode(create(List.of(1, 2, 3))).val).isEqualTo(2);

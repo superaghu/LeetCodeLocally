@@ -10,8 +10,9 @@ public class NthFibonacciNumber {
     }
 
     private static int fib(int i) {
-        if(i <=1) return i;
-        return fib(i-1) + fib(i-2);
-
+        if (i <= 1) {
+            return i;
+        }
+        return fib(i - 1) + fib(i - 2);
     }
 }

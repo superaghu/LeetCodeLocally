@@ -1,13 +1,14 @@
 package interview;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import interview.java.exercises.LC238ProductofArrayExceptSelf;
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
+@Test(enabled = false)
 public class LC238ProductofArrayExceptSelfTest {
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         LC238ProductofArrayExceptSelf program = new LC238ProductofArrayExceptSelf();
         assertThat(program.productExceptSelf(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{24, 12, 8, 6});

@@ -12,16 +12,17 @@ import java.util.stream.Collectors;
 /**
  * Unit test for simple App.
  */
+@Test(enabled = false)
 public class AppTest {
 
-    @Test
+    @Test(enabled = false)
     public void testNameFix() {
         final String exerciseName = "138. Copy List with Random Pointer\n\n\n";
         String className = "LC" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testRegex() {
         final Pattern RQ_TYPE_PATTERN = Pattern.compile("(outboundCalls)\\.([\\w]+\\.[\\w]+\\.[\\w]+)\\.(.+)");
         final String input = "outboundCalls.name.aTransactionType.aSvcName.aResponderId.value outboundCalls.name.aTransactionType.aSvcName.aResponderId.value";
@@ -30,7 +31,7 @@ public class AppTest {
         assertThat(result).isEqualTo("outboundCalls.withRequestType.name.aTransactionType.aSvcName.aRqType.aResponderId.value");
     }
 
-    @Test
+    @Test(enabled = false)
     public void random1() {
         List<Integer> list = List.of(1, 2, 3);
         final Integer reduceSum = list.stream().reduce(0, Integer::sum, Integer::sum);
@@ -38,12 +39,12 @@ public class AppTest {
         assertThat(reduceProduct - reduceSum).isEqualTo(0);
     }
 
-    @Test
+    @Test(enabled = false)
     public void shouldAssertLowerCase() {
         assertThat("a&bcd").isEqualTo(toLower("A&bcD"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testCountNumberOfDigits() {
         //given
         //when
@@ -79,8 +80,7 @@ public class AppTest {
         return str.chars().map(x -> x > 64 && x < 91 ? x + 32 : x).mapToObj(x -> (char) x).collect(StringBuilder::new, StringBuilder::append, StringBuilder::append).toString();
     }
 
-    @Test
-    //https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+    @Test(enabled = false)    //https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
     public void shouldAssertCountOfLowerValuesThanIndex() {
         final List<Integer> outValue = Utility.intArrayToList(smallerNumbersThanCurrent(Utility.listToIntArray(List.of(8, 1, 2, 2, 3))));
         assertThat(outValue).hasSameElementsAs(List.of(4, 0, 1, 1, 3));

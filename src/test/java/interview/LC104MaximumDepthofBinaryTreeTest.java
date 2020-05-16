@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class LC104MaximumDepthofBinaryTreeTest {
     private LC104MaximumDepthofBinaryTree program;
 
@@ -17,7 +18,7 @@ public class LC104MaximumDepthofBinaryTreeTest {
         program = new LC104MaximumDepthofBinaryTree();
     }
 
-    @Test
+    @Test(enabled = false)
     public void mergeTrees() {
         assertThat(program.maxDepth(createBinarySearchTree(List.of(1)))).isEqualTo(1);
         assertThat(program.maxDepth(createBinarySearchTree(List.of(1, 2)))).isEqualTo(2);

@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Test(enabled = false)
 public class CellComputeTest {
     private CellCompute program;
 
@@ -16,7 +17,7 @@ public class CellComputeTest {
         program = new CellCompute();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.cellCompete(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1)).isEqualTo(List.of(0, 1, 0, 0, 1, 0, 1, 0));
         assertThat(program.cellCompete(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 1)).isEqualTo(List.of(1, 0, 1, 0, 1, 0, 0, 1));

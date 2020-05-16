@@ -4,9 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC155MinStack_WithLinkedList {
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         final MinStack minStack = new MinStack();
         minStack.push(-2);

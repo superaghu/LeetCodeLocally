@@ -6,6 +6,7 @@ import interview.java.exercises.LC301RemoveInvalidParentheses;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC301RemoveInvalidParenthesesTest {
     private LC301RemoveInvalidParentheses program;
 
@@ -14,7 +15,7 @@ public class LC301RemoveInvalidParenthesesTest {
         program = new LC301RemoveInvalidParentheses();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.removeInvalidParentheses("()())()")).containsExactly("()()()", "(())()");
         assertThat(program.removeInvalidParentheses("(a)())()")).containsExactly("(a)()()", "(a())()");

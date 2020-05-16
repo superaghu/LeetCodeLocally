@@ -6,6 +6,7 @@ import interview.scala.exercises.LC13RomantoInteger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC13RomantoIntegerTest {
     private LC13RomantoInteger program;
 
@@ -14,7 +15,7 @@ public class LC13RomantoIntegerTest {
         program = new LC13RomantoInteger();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(6).isEqualTo(program.buildRomanToInt("VI"));
         assertThat(15).isEqualTo(program.buildRomanToInt("XV"));

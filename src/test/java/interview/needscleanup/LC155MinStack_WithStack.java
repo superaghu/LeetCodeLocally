@@ -7,9 +7,10 @@ import org.testng.annotations.Test;
 
 import java.util.Stack;
 
+@Test(enabled = false)
 public class LC155MinStack_WithStack {
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         final MinStack minStack = new MinStack();
         minStack.push(-2);
@@ -20,8 +21,6 @@ public class LC155MinStack_WithStack {
         minStack.pop();
         assertThat(minStack.top()).isEqualTo(0);
         assertThat(minStack.getMin()).isEqualTo(-2);
-
-
     }
 
     class MinStack {
@@ -34,6 +33,7 @@ public class LC155MinStack_WithStack {
 
         int min = Integer.MAX_VALUE;
         Stack<Data> stack = new Stack<>();
+
         public MinStack() {
 
         }

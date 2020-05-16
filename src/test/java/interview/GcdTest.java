@@ -6,6 +6,7 @@ import interview.java.exercises.Gcd;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class GcdTest {
     private Gcd program;
 
@@ -14,7 +15,7 @@ public class GcdTest {
         program = new Gcd();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.generalizedGCD(5, new int[]{2, 3, 4, 5, 6})).isEqualTo(1);
         assertThat(program.generalizedGCD(5, new int[]{2, 4, 6, 8, 10})).isEqualTo(2);

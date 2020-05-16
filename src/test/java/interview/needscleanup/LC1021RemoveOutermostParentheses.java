@@ -4,8 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC1021RemoveOutermostParentheses {
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(removeOuterParentheses("(()())(())")).isEqualTo("()()()");
         assertThat(removeOuterParentheses("(()())(())(()(()))")).isEqualTo("()()()()(())");

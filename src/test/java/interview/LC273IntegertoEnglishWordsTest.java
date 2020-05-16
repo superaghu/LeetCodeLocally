@@ -6,6 +6,7 @@ import interview.java.exercises.LC273IntegertoEnglishWords;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC273IntegertoEnglishWordsTest {
     private LC273IntegertoEnglishWords program;
 
@@ -14,7 +15,7 @@ public class LC273IntegertoEnglishWordsTest {
         program = new LC273IntegertoEnglishWords();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(program.wordForm(0)).isEqualTo("Zero");
         assertThat(program.wordForm(1)).isEqualTo("One");

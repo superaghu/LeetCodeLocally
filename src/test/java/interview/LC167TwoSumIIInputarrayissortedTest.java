@@ -2,10 +2,11 @@ package interview;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import interview.scala.rmsolutions.LC167TwoSumIIInputarrayissorted;
+import interview.java.exercises.LC167TwoSumIIInputarrayissorted;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test(enabled = false)
 public class LC167TwoSumIIInputarrayissortedTest {
     private LC167TwoSumIIInputarrayissorted program;
 
@@ -14,7 +15,7 @@ public class LC167TwoSumIIInputarrayissortedTest {
         program = new LC167TwoSumIIInputarrayissorted();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testGenerate() {
         assertThat(program.twoSum(new int[]{2, 7, 11, 15}, 9)).isEqualTo(new int[]{1, 2});
         assertThat(program.twoSum(new int[]{2, 7, 11, 15}, 13)).isEqualTo(new int[]{1, 3});

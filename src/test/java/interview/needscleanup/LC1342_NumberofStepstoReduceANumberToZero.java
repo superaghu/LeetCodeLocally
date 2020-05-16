@@ -5,8 +5,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.testng.annotations.Test;
 
 //https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+@Test(enabled = false)
 public class LC1342_NumberofStepstoReduceANumberToZero {
-    @Test
+    @Test(enabled = false)
     public void testName() {
         assertThat(numberOfSteps(8)).isEqualTo(4);
         assertThat(numberOfSteps(14)).isEqualTo(6);
@@ -14,10 +15,12 @@ public class LC1342_NumberofStepstoReduceANumberToZero {
     }
 
     private int numberOfSteps(int num) {
-        if(num <=0) return 0;
+        if (num <= 0) {
+            return 0;
+        }
         int steps = 0;
-        while(num > 0) {
-            steps += ((num&1)==1) ? 2 : 1;
+        while (num > 0) {
+            steps += ((num & 1) == 1) ? 2 : 1;
             num >>= 1;
         }
         return steps--;
