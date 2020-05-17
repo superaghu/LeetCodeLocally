@@ -1,4 +1,4 @@
-package interview.java;
+package interview.java.exercises;
 
 /**
  * @see <a href="https://leetcode.com/problems/decode-ways/">Link</a>
