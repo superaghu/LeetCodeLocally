@@ -23,15 +23,6 @@ public class AppTest {
     }
 
     @Test(enabled = false)
-    public void testRegex() {
-        final Pattern RQ_TYPE_PATTERN = Pattern.compile("(outboundCalls)\\.([\\w]+\\.[\\w]+\\.[\\w]+)\\.(.+)");
-        final String input = "outboundCalls.name.aTransactionType.aSvcName.aResponderId.value outboundCalls.name.aTransactionType.aSvcName.aResponderId.value";
-        final Matcher matcher = RQ_TYPE_PATTERN.matcher(input);
-        final String result = matcher.replaceFirst("$1.withRequestType.$2." + "aRqType" + ".$3");
-        assertThat(result).isEqualTo("outboundCalls.withRequestType.name.aTransactionType.aSvcName.aRqType.aResponderId.value");
-    }
-
-    @Test(enabled = false)
     public void random1() {
         List<Integer> list = List.of(1, 2, 3);
         final Integer reduceSum = list.stream().reduce(0, Integer::sum, Integer::sum);
