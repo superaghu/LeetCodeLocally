@@ -2,7 +2,7 @@
 
 quickRun project is an attempt to help interviews by bringing the interview problems closer to you to run them locally with test coverage.
 
-## Pre requsite
+## Prerequisite 
 * Understand how fork works at https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 * Have JDK12
 
