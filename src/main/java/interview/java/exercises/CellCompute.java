@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * See question at below image
  * <p>
- * <img width="1147" height="417" src="../../../resources/images/cellCompute.jpeg" alt="">
+ * <img width="1147" height="417" src="../../../../resources/images/cellCompute.jpeg" alt="">
  * <dl>
  */
 public class CellCompute {

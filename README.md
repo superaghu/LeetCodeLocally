@@ -3,7 +3,7 @@
 quickRun project is an attempt to help interviews by bringing the interview problems closer to you to run them locally with test coverage.
 
 ## Pre requsite
-* Under how fork works at https://help.github.com/en/github/getting-started-with-github/fork-a-repo
+* Understand how fork works at https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 * Have JDK12
 
 ## To get started
@@ -11,4 +11,11 @@ quickRun project is an attempt to help interviews by bringing the interview prob
 * Clone locally
 * run ` mvn clean package  -s ./settings.xml`
 
-
+## Benefits of using this repo over directly leet coding or other options
+* Support for debugging
+* More upfront test cases than most popular websites
+    * Add your own tests cases before you get started
+    * Finding your edge cases will help you write full algorithm
+* Add your own exercises
+    * Example, you learnt about new problem from an interview, you can add it here
+* Contribute questions/solutions and share with your friends
