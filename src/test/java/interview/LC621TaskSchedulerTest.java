@@ -17,5 +17,8 @@ public class LC621TaskSchedulerTest {
     @Test(enabled = false)
     public void testName() {
         assertThat(program.leastInterval(new char[]{'A', 'A', 'A', 'B', 'B', 'B'}, 2)).isEqualTo(8);
+        assertThat(program.leastInterval(new char[]{'A', 'A'}, 100)).isEqualTo(102);
+        assertThat(program.leastInterval(new char[]{'A', 'A'}, 1)).isEqualTo(2);
+        assertThat(program.leastInterval(new char[]{'A', 'B', 'B'}, 1)).isEqualTo(3);
     }
 }
