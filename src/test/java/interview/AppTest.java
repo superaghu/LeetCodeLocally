@@ -2,22 +2,21 @@ package interview;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
  * Unit test for simple App.
  */
-@Test(enabled = false)
+@Ignore
+@Test
 public class AppTest {
 
-    @Test(enabled = false)
     public void testNameFix() {
-        final String exerciseName = "138. Copy List with Random Pointer\n\n\n";
+        final String exerciseName = "767. Reorganize String\n";
         String className = "LC" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
