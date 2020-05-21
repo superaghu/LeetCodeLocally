@@ -20,5 +20,9 @@ public class LC767ReorganizeStringTest {
     public void testName() {
         assertThat(program.reorganizeString("aab")).isEqualTo("aba");
         assertThat(program.reorganizeString("aaab")).isEqualTo("");
+        assertThat(program.reorganizeString("")).isEqualTo("");
+        assertThat(program.reorganizeString("aa")).isEqualTo("");
+        assertThat(program.reorganizeString("aaabbb")).isIn("ababab", "bababa");
+        assertThat(program.reorganizeString("aabbbzzzzzz")).isIn("zbzbzbzazaz", "zazazbzbzbz", "zbzazbzazbz");
     }
 }
