@@ -8,7 +8,7 @@ import interview.java.model.TreeNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC199BinaryTreeRightSideViewTest {
@@ -26,7 +26,7 @@ public class LC199BinaryTreeRightSideViewTest {
         TreeNode rightTree = new TreeNode(5, null, new TreeNode(6));
         TreeNode toFlatten = new TreeNode(1, leftTree, rightTree);
         display(toFlatten);
-        final List<Integer> integers = program.rightSideView(toFlatten);
+        final java.util.List<Integer> integers = program.rightSideView(toFlatten);
         display(toFlatten);
         assertThat(integers).isEqualTo(List.of(1, 5, 6));
     }

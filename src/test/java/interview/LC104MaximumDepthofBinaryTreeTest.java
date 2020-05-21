@@ -7,7 +7,7 @@ import interview.java.exercises.LC104MaximumDepthofBinaryTree;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC104MaximumDepthofBinaryTreeTest {
@@ -20,10 +20,10 @@ public class LC104MaximumDepthofBinaryTreeTest {
 
     @Test(enabled = false)
     public void mergeTrees() {
-        assertThat(program.maxDepth(createBinarySearchTree(List.of(1)))).isEqualTo(1);
-        assertThat(program.maxDepth(createBinarySearchTree(List.of(1, 2)))).isEqualTo(2);
-        assertThat(program.maxDepth(createBinarySearchTree(List.of(1, 2, 3)))).isEqualTo(3);
-        assertThat(program.maxDepth(createBinarySearchTree(List.of(2, 1, 3)))).isEqualTo(2);
-        assertThat(program.maxDepth(createBinarySearchTree(List.of(2, 1, 3, 4)))).isEqualTo(3);
+        assertThat(program.maxDepth(createBinarySearchTree(List.of(1).toJavaList()))).isEqualTo(1);
+        assertThat(program.maxDepth(createBinarySearchTree(List.of(1, 2).toJavaList()))).isEqualTo(2);
+        assertThat(program.maxDepth(createBinarySearchTree(List.of(1, 2, 3).toJavaList()))).isEqualTo(3);
+        assertThat(program.maxDepth(createBinarySearchTree(List.of(2, 1, 3).toJavaList()))).isEqualTo(2);
+        assertThat(program.maxDepth(createBinarySearchTree(List.of(2, 1, 3, 4).toJavaList()))).isEqualTo(3);
     }
 }

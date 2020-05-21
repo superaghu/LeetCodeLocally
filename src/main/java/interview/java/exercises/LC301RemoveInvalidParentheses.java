@@ -1,5 +1,6 @@
 package interview.java.exercises;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,6 +8,6 @@ import java.util.List;
  */
 public class LC301RemoveInvalidParentheses {
     public List<String> removeInvalidParentheses(String s) {
-        return List.of();
+        return new ArrayList<>();
     }
 }

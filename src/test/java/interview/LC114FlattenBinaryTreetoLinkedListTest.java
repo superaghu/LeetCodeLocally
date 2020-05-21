@@ -8,7 +8,7 @@ import interview.java.model.TreeNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC114FlattenBinaryTreetoLinkedListTest {
@@ -27,6 +27,6 @@ public class LC114FlattenBinaryTreetoLinkedListTest {
         display(toFlatten);
         program.flatten(toFlatten);
         display(toFlatten);
-        assertThat(toFlatten).isEqualTo(TreeNode.createBinarySearchTree(List.of(1, 2, 3, 4, 5, 6)));
+        assertThat(toFlatten).isEqualTo(TreeNode.createBinarySearchTree(List.of(1, 2, 3, 4, 5, 6).toJavaList()));
     }
 }

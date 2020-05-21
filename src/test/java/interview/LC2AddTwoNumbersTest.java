@@ -6,8 +6,9 @@ import interview.java.exercises.LC2AddTwoNumbers;
 import interview.java.model.ListNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import io.vavr.collection.List;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @Test(enabled = false)
 public class LC2AddTwoNumbersTest {
@@ -20,7 +21,7 @@ public class LC2AddTwoNumbersTest {
 
     @Test(enabled = false)
     public void testName() {
-        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(5, 2, 3)), ListNode.create(List.of(5, 2, 3)));
+        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(5, 2, 3).toJavaList()), ListNode.create(List.of(5, 2, 3).toJavaList()));
         assertThat(node.getVal()).isEqualTo(0);
         assertThat(node.getNext().getVal()).isEqualTo(5);
         assertThat(node.getNext().getNext().getVal()).isEqualTo(6);
@@ -28,7 +29,7 @@ public class LC2AddTwoNumbersTest {
 
     @Test(enabled = false)
     public void testName2() {
-        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(5, 2, 3)), ListNode.create(List.of()));
+        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(5, 2, 3).toJavaList()), ListNode.create(new ArrayList<>()));
         assertThat(node.getVal()).isEqualTo(5);
         assertThat(node.getNext().getVal()).isEqualTo(2);
         assertThat(node.getNext().getNext().getVal()).isEqualTo(3);
@@ -36,7 +37,7 @@ public class LC2AddTwoNumbersTest {
 
     @Test(enabled = false)
     public void testName3() {
-        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(9, 9)), ListNode.create(List.of(1)));
+        final ListNode node = program.addTwoNumbers(ListNode.create(List.of(9, 9).toJavaList()), ListNode.create(List.of(1).toJavaList()));
         assertThat(node.getVal()).isEqualTo(0);
         assertThat(node.getNext().getVal()).isEqualTo(0);
         assertThat(node.getNext().getNext().getVal()).isEqualTo(1);
