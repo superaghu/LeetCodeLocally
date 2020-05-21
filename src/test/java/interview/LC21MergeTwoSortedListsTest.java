@@ -8,7 +8,7 @@ import interview.java.model.ListNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC21MergeTwoSortedListsTest {
@@ -21,7 +21,7 @@ public class LC21MergeTwoSortedListsTest {
 
     @Test(enabled = false)
     public void testName() {
-        ListNode node = program.mergeTwoLists(create(List.of(1, 2, 4)), create(List.of(1, 3, 4)));
+        ListNode node = program.mergeTwoLists(create(List.of(1, 2, 4).toJavaList()), create(List.of(1, 3, 4).toJavaList()));
         assertThat(node.getVal()).isEqualTo(1);
         node = node.getNext();
         assertThat(node.getVal()).isEqualTo(1);

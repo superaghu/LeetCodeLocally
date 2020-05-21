@@ -9,7 +9,7 @@ public class LC590NaryTreePostorderTraversal {
 
     public List<Integer> postorder(Node root) {
         if (root == null) {
-            return List.of();
+            return new ArrayList<>();
         }
 
         List<Integer> list = new ArrayList<>();

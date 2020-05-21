@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 //https://leetcode.com/problems/middle-of-the-linked-list/
 @Test(enabled = false)

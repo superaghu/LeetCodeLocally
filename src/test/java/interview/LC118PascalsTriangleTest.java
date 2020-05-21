@@ -6,7 +6,7 @@ import interview.java.exercises.LC118PascalsTriangle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC118PascalsTriangleTest {

@@ -8,7 +8,7 @@ import interview.java.model.TreeNode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import io.vavr.collection.List;
 
 @Test(enabled = false)
 public class LC938RangeSumofBSTTest {
@@ -21,7 +21,7 @@ public class LC938RangeSumofBSTTest {
 
     @Test(enabled = false)
     public void testName() {
-        final TreeNode treeNode = createBinarySearchTree(List.of(1, 2, 3, 5, 4));
+        final TreeNode treeNode = createBinarySearchTree(List.of(1, 2, 3, 5, 4).toJavaList());
         assertThat(program.rangeSumBST(treeNode, 1, 3)).isEqualTo(6);
         assertThat(program.rangeSumBST(treeNode, 1, 5)).isEqualTo(15);
         assertThat(program.rangeSumBST(treeNode, 4, 5)).isEqualTo(9);
