@@ -11,12 +11,12 @@ import java.util.stream.Collectors;
 /**
  * Unit test for simple App.
  */
-@Ignore
+//@Ignore
 @Test
 public class AppTest {
 
     public void testNameFix() {
-        final String exerciseName = "767. Reorganize String\n";
+        final String exerciseName = "253. Meeting Rooms II\n";
         String className = "LC" + (exerciseName + "\n").replaceAll("[\\s\\.-]", "");
         System.out.println(className);
     }
