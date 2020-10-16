@@ -1,4 +1,4 @@
-![Java CI with Maven](https://github.com/superaghu/LeetCodeLocally/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+![Java CI with Maven](https://github.com/superaghu/LeetCodeLocally/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 LeetCodeLocally project is an attempt to help interviews by bringing the interview problems closer to you to run them locally with test coverage.
 
