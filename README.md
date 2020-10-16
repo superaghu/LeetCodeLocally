@@ -4,7 +4,7 @@ quickRun project is an attempt to help interviews by bringing the interview prob
 
 ## Prerequisite 
 * Understand how fork works at https://help.github.com/en/github/getting-started-with-github/fork-a-repo
-* Have JDK12
+* Have JDK8
 
 ## To get started
 * Fork the project
@@ -19,3 +19,4 @@ quickRun project is an attempt to help interviews by bringing the interview prob
 * Add your own exercises
     * Example, you learnt about new problem from an interview, you can add it here
 * Contribute questions/solutions and share with your friends
+* Write in Java or Scala (Kotlin coming up)
