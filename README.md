@@ -1,6 +1,6 @@
-![Java CI with Maven](https://github.com/knightzsolutions/quickRun/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+![Java CI with Maven](https://github.com/superaghu/LeetCodeLocally/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 
-quickRun project is an attempt to help interviews by bringing the interview problems closer to you to run them locally with test coverage.
+LeetCodeLocally project is an attempt to help interviews by bringing the interview problems closer to you to run them locally with test coverage.
 
 ## Prerequisite 
 * Understand how fork works at https://help.github.com/en/github/getting-started-with-github/fork-a-repo
